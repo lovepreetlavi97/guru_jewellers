@@ -1,0 +1,26 @@
+/* Container to center and position text */
+.text-container {
+  position: relative; /* Establishes a positioning context */
+  display: flex; /* Use flexbox to center items */
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align items to the top */
+  height: 100vh; /* Full viewport height (or adjust as needed) */
+}
+
+/* Each animated character */
+.animated-char {
+  display: inline-block; /* Ensure each character is treated as an inline-block element */
+  opacity: 0; /* Start with characters invisible */
+  transform: translateY(-100px); /* Start with characters moved up */
+  animation: drop 1s forwards; /* Define the animation properties */
+  color: white;
+
+}
+
+/* Keyframes for the drop animation */
+@keyframes drop {
+  to {
+    opacity: 1; /* End with characters fully visible */
+    transform: translateY(0); /* Move characters to their original position */
+  }
+}
